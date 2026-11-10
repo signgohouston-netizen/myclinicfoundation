@@ -17,7 +17,6 @@ export function Footer() {
             around the world.
           </p>
           <p className="mt-4 text-sm text-brand-300">{siteConfig.email}</p>
-          <p className="mt-1 text-sm text-brand-300">{siteConfig.location.display}</p>
         </div>
 
         {footerNav.map((col) => (

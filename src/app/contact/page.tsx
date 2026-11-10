@@ -35,8 +35,7 @@ export default function ContactPage() {
             {[
               { icon: "mail" as const, t: "Email", d: siteConfig.email },
               { icon: "globe" as const, t: "Facebook", d: "facebook.com/myclinicfoundation", href: siteConfig.facebook },
-              { icon: "flag" as const, t: "Based in", d: siteConfig.location.display },
-              { icon: "globe" as const, t: "Focus regions", d: "United States · Pakistan · Worldwide" },
+              { icon: "flag" as const, t: "Focus regions", d: "United States · Pakistan · Worldwide" },
             ].map((c) => (
               <div key={c.t} className="flex items-start gap-4 rounded-2xl border border-brand-100 bg-white p-5">
                 <div className="flex h-11 w-11 flex-none items-center justify-center rounded-xl bg-brand-50 text-brand-600">

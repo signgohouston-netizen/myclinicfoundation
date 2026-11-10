@@ -10,12 +10,6 @@ export const siteConfig = {
   email: "info@myclinicfoundation.org",
   facebook: "https://www.facebook.com/myclinicfoundation",
   primaryRegions: ["United States", "Pakistan"],
-  location: {
-    city: "Jupiter",
-    state: "Florida",
-    country: "USA",
-    display: "Jupiter, Florida, USA",
-  },
 } as const;
 
 export type NavItem = { label: string; href: string };
