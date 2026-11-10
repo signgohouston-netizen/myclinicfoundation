@@ -13,10 +13,10 @@ export const metadata: Metadata = {
 };
 
 const values = [
-  { icon: "heart" as const, t: "Compassion first", d: "We exist for the elderly, the vulnerable and anyone who cannot get care on their own." },
-  { icon: "shield-check" as const, t: "Trust & dignity", d: "Verified needs, protected information, and respect for every member we serve." },
-  { icon: "globe" as const, t: "No borders", d: "Volunteers, donors and patients from every country are welcome here." },
-  { icon: "users" as const, t: "Community powered", d: "Thousands of small acts of generosity add up to life-changing care." },
+  { icon: "heart" as const, accent: "#ec4899", t: "Compassion first", d: "We exist for the elderly, the vulnerable and anyone who cannot get care on their own." },
+  { icon: "shield-check" as const, accent: "#10b981", t: "Trust & dignity", d: "Verified needs, protected information, and respect for every member we serve." },
+  { icon: "globe" as const, accent: "#0ea5e9", t: "No borders", d: "Volunteers, donors and patients from every country are welcome here." },
+  { icon: "users" as const, accent: "#f59e0b", t: "Community powered", d: "Thousands of small acts of generosity add up to life-changing care." },
 ];
 
 export default function AboutPage() {
@@ -77,8 +77,15 @@ export default function AboutPage() {
         <SectionHeading eyebrow="Our values" title="What guides us" />
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {values.map((v) => (
-            <div key={v.t} className="rounded-2xl border border-brand-100 bg-white p-7">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-600">
+            <div
+              key={v.t}
+              className="rounded-2xl border border-brand-100 bg-white p-7"
+              style={{ borderTop: `4px solid ${v.accent}` }}
+            >
+              <div
+                className="flex h-12 w-12 items-center justify-center rounded-xl"
+                style={{ backgroundColor: `${v.accent}1a`, color: v.accent }}
+              >
                 <Icon name={v.icon} className="h-6 w-6" />
               </div>
               <h3 className="mt-5 font-bold text-ink">{v.t}</h3>

@@ -49,12 +49,19 @@ export default function InsurancePage() {
         />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {[
-            { icon: "heart" as const, t: "1. Volunteer care", d: "Many providers give their time and services for free to members who qualify." },
-            { icon: "shield-check" as const, t: "2. Insurance billed", d: "Where Medicare, Medicaid or private insurance approves, the provider is paid by the plan." },
-            { icon: "users" as const, t: "3. Donor sponsorship", d: "Any remaining bill can be sponsored by donors anywhere in the world." },
+            { icon: "heart" as const, accent: "#ec4899", t: "1. Volunteer care", d: "Many providers give their time and services for free to members who qualify." },
+            { icon: "shield-check" as const, accent: "#10b981", t: "2. Insurance billed", d: "Where Medicare, Medicaid or private insurance approves, the provider is paid by the plan." },
+            { icon: "users" as const, accent: "#6366f1", t: "3. Donor sponsorship", d: "Any remaining bill can be sponsored by donors anywhere in the world." },
           ].map((c) => (
-            <div key={c.t} className="rounded-2xl border border-brand-100 bg-white p-7">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-600">
+            <div
+              key={c.t}
+              className="rounded-2xl border border-brand-100 bg-white p-7"
+              style={{ borderTop: `4px solid ${c.accent}` }}
+            >
+              <div
+                className="flex h-12 w-12 items-center justify-center rounded-xl"
+                style={{ backgroundColor: `${c.accent}1a`, color: c.accent }}
+              >
                 <Icon name={c.icon} className="h-6 w-6" />
               </div>
               <h3 className="mt-5 text-lg font-bold text-ink">{c.t}</h3>

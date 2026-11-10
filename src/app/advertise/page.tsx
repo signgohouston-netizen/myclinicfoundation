@@ -35,15 +35,22 @@ export default function AdvertisePage() {
         />
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            { icon: "stethoscope" as const, t: "Doctors & clinics", d: "Promote consultations, specialties and availability." },
-            { icon: "flask" as const, t: "Laboratories", d: "Advertise diagnostic packages and testing offers." },
-            { icon: "hospital" as const, t: "Hospitals", d: "Showcase departments, programs and centers of excellence." },
-            { icon: "pill" as const, t: "Pharmacies", d: "Feature services, savings and delivery options." },
-            { icon: "sparkles" as const, t: "Pharmaceutical companies", d: "Introduce new products and innovations to the community." },
-            { icon: "flag" as const, t: "Google Ads & health brands", d: "We welcome responsible, health-related advertising partners." },
+            { icon: "stethoscope" as const, accent: "#0ea5e9", t: "Doctors & clinics", d: "Promote consultations, specialties and availability." },
+            { icon: "flask" as const, accent: "#8b5cf6", t: "Laboratories", d: "Advertise diagnostic packages and testing offers." },
+            { icon: "hospital" as const, accent: "#6366f1", t: "Hospitals", d: "Showcase departments, programs and centers of excellence." },
+            { icon: "pill" as const, accent: "#10b981", t: "Pharmacies", d: "Feature services, savings and delivery options." },
+            { icon: "sparkles" as const, accent: "#ec4899", t: "Pharmaceutical companies", d: "Introduce new products and innovations to the community." },
+            { icon: "flag" as const, accent: "#f97316", t: "Google Ads & health brands", d: "We welcome responsible, health-related advertising partners." },
           ].map((c) => (
-            <div key={c.t} className="card-hover rounded-2xl border border-brand-100 bg-white p-7">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-600">
+            <div
+              key={c.t}
+              className="card-hover rounded-2xl border border-brand-100 bg-white p-7"
+              style={{ borderTop: `4px solid ${c.accent}` }}
+            >
+              <div
+                className="flex h-12 w-12 items-center justify-center rounded-xl"
+                style={{ backgroundColor: `${c.accent}1a`, color: c.accent }}
+              >
                 <Icon name={c.icon} className="h-6 w-6" />
               </div>
               <h3 className="mt-5 text-lg font-bold text-ink">{c.t}</h3>

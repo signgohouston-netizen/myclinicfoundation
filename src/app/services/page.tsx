@@ -43,14 +43,18 @@ export default function ServicesPage() {
             <div
               key={s.slug}
               id={s.slug}
-              className="scroll-mt-24 grid gap-6 rounded-3xl border border-brand-100 bg-white p-7 sm:p-9 md:grid-cols-[auto_1fr_auto] md:items-center"
+              className="scroll-mt-24 grid gap-6 overflow-hidden rounded-3xl border border-brand-100 bg-white p-7 sm:p-9 md:grid-cols-[auto_1fr_auto] md:items-center"
+              style={{ borderLeft: `6px solid ${s.accent}` }}
             >
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-50 text-brand-600">
+              <div
+                className="flex h-16 w-16 items-center justify-center rounded-2xl"
+                style={{ backgroundColor: `${s.accent}1a`, color: s.accent }}
+              >
                 <Icon name={s.icon as never} className="h-8 w-8" />
               </div>
               <div>
                 <div className="flex items-center gap-3">
-                  <span className="text-xs font-bold text-brand-400">
+                  <span className="text-xs font-bold" style={{ color: s.accent }}>
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <h2 className="text-xl font-bold text-ink">{s.title}</h2>
@@ -59,7 +63,7 @@ export default function ServicesPage() {
                 <ul className="mt-4 grid gap-2 sm:grid-cols-2">
                   {s.details.map((d) => (
                     <li key={d} className="flex items-start gap-2 text-sm text-ink">
-                      <Icon name="check" className="mt-0.5 h-4 w-4 flex-none text-brand-600" />
+                      <Icon name="check" className="mt-0.5 h-4 w-4 flex-none" style={{ color: s.accent }} />
                       {d}
                     </li>
                   ))}

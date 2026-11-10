@@ -42,16 +42,23 @@ export default function DonatePage() {
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {[
-                { icon: "stethoscope" as const, t: "$25", d: "Toward a doctor's consultation" },
-                { icon: "flask" as const, t: "$50", d: "Help fund diagnostic lab tests" },
-                { icon: "pill" as const, t: "$100", d: "A month of essential medicine" },
-                { icon: "hospital" as const, t: "$250+", d: "Toward hospital or surgical care" },
+                { icon: "stethoscope" as const, accent: "#0ea5e9", t: "$25", d: "Toward a doctor's consultation" },
+                { icon: "flask" as const, accent: "#8b5cf6", t: "$50", d: "Help fund diagnostic lab tests" },
+                { icon: "pill" as const, accent: "#10b981", t: "$100", d: "A month of essential medicine" },
+                { icon: "hospital" as const, accent: "#6366f1", t: "$250+", d: "Toward hospital or surgical care" },
               ].map((x) => (
-                <div key={x.t} className="rounded-2xl border border-brand-100 bg-white p-5">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-50 text-brand-600">
+                <div
+                  key={x.t}
+                  className="rounded-2xl border border-brand-100 bg-white p-5"
+                  style={{ borderTop: `4px solid ${x.accent}` }}
+                >
+                  <div
+                    className="flex h-10 w-10 items-center justify-center rounded-lg"
+                    style={{ backgroundColor: `${x.accent}1a`, color: x.accent }}
+                  >
                     <Icon name={x.icon} className="h-5 w-5" />
                   </div>
-                  <p className="mt-3 text-xl font-extrabold text-brand-600">{x.t}</p>
+                  <p className="mt-3 text-xl font-extrabold" style={{ color: x.accent }}>{x.t}</p>
                   <p className="text-sm text-ink-soft">{x.d}</p>
                 </div>
               ))}

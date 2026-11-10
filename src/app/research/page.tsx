@@ -32,12 +32,19 @@ export default function ResearchPage() {
         <SectionHeading eyebrow="What you can share" title="Knowledge, openly exchanged" />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {[
-            { icon: "sparkles" as const, t: "Research & studies", d: "Publish peer-ready studies, case reports and clinical findings for the community." },
-            { icon: "flask" as const, t: "Scientific work", d: "Scientists and doctors can present ongoing work and invite collaboration." },
-            { icon: "pill" as const, t: "New products", d: "Pharmaceutical companies can introduce new medicines and health innovations." },
+            { icon: "sparkles" as const, accent: "#8b5cf6", t: "Research & studies", d: "Publish peer-ready studies, case reports and clinical findings for the community." },
+            { icon: "flask" as const, accent: "#0ea5e9", t: "Scientific work", d: "Scientists and doctors can present ongoing work and invite collaboration." },
+            { icon: "pill" as const, accent: "#10b981", t: "New products", d: "Pharmaceutical companies can introduce new medicines and health innovations." },
           ].map((c) => (
-            <div key={c.t} className="rounded-2xl border border-brand-100 bg-white p-7">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-600">
+            <div
+              key={c.t}
+              className="rounded-2xl border border-brand-100 bg-white p-7"
+              style={{ borderTop: `4px solid ${c.accent}` }}
+            >
+              <div
+                className="flex h-12 w-12 items-center justify-center rounded-xl"
+                style={{ backgroundColor: `${c.accent}1a`, color: c.accent }}
+              >
                 <Icon name={c.icon} className="h-6 w-6" />
               </div>
               <h3 className="mt-5 text-lg font-bold text-ink">{c.t}</h3>

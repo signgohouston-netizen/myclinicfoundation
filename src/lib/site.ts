@@ -58,6 +58,7 @@ export type Service = {
   slug: string;
   title: string;
   icon: string; // key used by the Icon component
+  accent: string; // hex accent color for colorful UI
   blurb: string;
   details: string[];
 };
@@ -67,6 +68,7 @@ export const services: Service[] = [
     slug: "doctors",
     title: "Doctors & Physicians",
     icon: "stethoscope",
+    accent: "#0ea5e9",
     blurb:
       "Volunteer general practitioners and specialists offering consultations, follow-ups and second opinions.",
     details: [
@@ -79,6 +81,7 @@ export const services: Service[] = [
     slug: "pharmacy",
     title: "Pharmacies",
     icon: "pill",
+    accent: "#10b981",
     blurb:
       "Partner pharmacies providing medicines at reduced cost or fully sponsored for qualifying patients.",
     details: [
@@ -91,6 +94,7 @@ export const services: Service[] = [
     slug: "laboratories",
     title: "Laboratories",
     icon: "flask",
+    accent: "#8b5cf6",
     blurb:
       "Diagnostic labs offering blood work, imaging and tests at volunteer or subsidized rates.",
     details: [
@@ -103,6 +107,7 @@ export const services: Service[] = [
     slug: "emergency-rooms",
     title: "Emergency Rooms",
     icon: "ambulance",
+    accent: "#ef4444",
     blurb:
       "Emergency departments and urgent-care partners for time-critical needs.",
     details: [
@@ -115,6 +120,7 @@ export const services: Service[] = [
     slug: "hospitals",
     title: "Hospitals",
     icon: "hospital",
+    accent: "#6366f1",
     blurb:
       "Partner hospitals supporting admissions, surgeries and inpatient care for members.",
     details: [
@@ -127,6 +133,7 @@ export const services: Service[] = [
     slug: "trauma-centers",
     title: "Trauma Centers",
     icon: "shield",
+    accent: "#f97316",
     blurb:
       "Specialized trauma centers for serious injuries and complex, life-threatening care.",
     details: [
@@ -139,6 +146,7 @@ export const services: Service[] = [
     slug: "private-nurses",
     title: "Private Nurses",
     icon: "heartpulse",
+    accent: "#ec4899",
     blurb:
       "Volunteer and professional nurses for home care, elderly care and post-operative recovery.",
     details: [
@@ -151,6 +159,7 @@ export const services: Service[] = [
     slug: "private-assistants",
     title: "Private Assistants",
     icon: "hands",
+    accent: "#f59e0b",
     blurb:
       "Caregivers and personal assistants helping elderly and disabled members with daily living.",
     details: [
