@@ -11,6 +11,12 @@ export function OrganizationJsonLd() {
     description: siteConfig.description,
     email: siteConfig.email,
     sameAs: [siteConfig.facebook],
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: siteConfig.location.city,
+      addressRegion: siteConfig.location.state,
+      addressCountry: "US",
+    },
     nonprofitStatus: "Nonprofit501c3",
     areaServed: ["US", "PK", "Worldwide"],
     knowsAbout: [
